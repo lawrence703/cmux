@@ -79,7 +79,7 @@ extension TerminalSurfaceHosting {
 /// hops below.
 final class GhosttySurfaceBridge: @unchecked Sendable {
     private let lock = NSLock()
-    private var _surfaceView: GhosttySurfaceView?
+    private weak var _surfaceView: GhosttySurfaceView?
 
     var surfaceView: GhosttySurfaceView? {
         get {
